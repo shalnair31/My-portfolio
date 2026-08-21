@@ -1,4 +1,4 @@
-name = "shalina-portfolio"
+name = "my-portfolio"
 main = "js/main.js"
 compatibility_date = "2024-01-01"
 routes = ["*/"]
