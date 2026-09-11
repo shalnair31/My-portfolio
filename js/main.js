@@ -165,7 +165,7 @@
     function restart() {
       if (reducedMotion) return;
       clearInterval(timer);
-      timer = setInterval(function () { step(1); }, 7000);
+      timer = setInterval(function () { step(1); }, 10000);
     }
 
     prevBtn.addEventListener("click", function () { step(-1); restart(); });
