@@ -84,10 +84,6 @@ a { text-decoration: none; color: inherit; }
 ul { list-style: none; }
 ::selection { background: var(--gold); color: var(--navy-950); }
 
-/* ========== Focus-visible for keyboard navigation ========== */
-:focus-visible { outline: 2px solid var(--gold); outline-offset: 4px; }
-a:focus-visible { outline: 2px solid var(--gold); outline-offset: 4px; button:focus-visible { outline: 2px solid var(--gold); outline-offset: 4px; }
-
 .container {
   width: min(1160px, 92%);
   margin: 0 auto;
@@ -147,12 +143,9 @@ a:focus-visible { outline: 2px solid var(--gold); outline-offset: 4px; button:fo
   letter-spacing: 0.03em;
   text-transform: uppercase;
   position: relative;
-  padding: 8px 0;
+  padding: 6px 0;
   white-space: nowrap;
   transition: color 0.25s;
-  min-height: 44px;
-  display: flex;
-  align-items: center;
 }
 .main-nav a::after {
   content: "";
@@ -223,7 +216,7 @@ html[data-theme="dark"] .theme-toggle .icon-moon { display: none; }
    ============================================================ */
 .hero {
   position: relative;
-  min-height: 100dvh;
+  min-height: 100vh;
   display: flex;
   align-items: center;
   background:
@@ -232,7 +225,7 @@ html[data-theme="dark"] .theme-toggle .icon-moon { display: none; }
     var(--navy-950);
   color: var(--cream);
   overflow: hidden;
-  padding: clamp(100px, 18vh, 140px) 0 clamp(80px, 12vh, 90px);
+  padding: 140px 0 90px;
 }
 .hero-grid {
   position: absolute;
@@ -405,7 +398,7 @@ html[data-theme="dark"] .theme-toggle .icon-moon { display: none; }
 /* ============================================================
    SECTION BASICS
    ============================================================ */
-.section { padding: clamp(64px, 8vh, 110px) 0; }
+.section { padding: 110px 0; }
 
 .section-kicker {
   color: var(--gold);
@@ -851,9 +844,9 @@ html[data-theme="dark"] .theme-toggle .icon-moon { display: none; }
 .award-figure { margin: 0; flex-shrink: 0; }
 .award-figure img {
   display: block;
-  width: 100%;
-  height: auto;
-  object-fit: contain;
+  width: 250px;
+  height: 175px;
+  object-fit: cover;
   border-radius: 12px;
   border: 1px solid var(--line);
   box-shadow: var(--shadow-sm);
@@ -1479,7 +1472,6 @@ a.cert-card:hover .cert-cta { color: var(--gold-light); }
   .tl-item { padding: 16px 12px; }
   .tl-item::before { left: -16px; }
   .award-media-grid { grid-template-columns: 1fr; }
-  .award-figure img { height: auto; }
   .stats-grid { grid-template-columns: 1fr; gap: 24px; }
   .section-lead { margin-bottom: 32px; }
   .about-visual { flex-direction: column; }
@@ -1487,6 +1479,7 @@ a.cert-card:hover .cert-cta { color: var(--gold-light); }
   .edu-item { flex-direction: column; align-items: flex-start; gap: 6px; }
   .award { flex-direction: column; align-items: flex-start; gap: 10px; }
   .award-figure, .award-figure img { width: 100%; }
+  .award-figure img { height: 200px; }
   .contact-line { padding: 16px 16px; }
   .hero { padding-top: 100px; }
   .nav-actions { gap: 6px; }
