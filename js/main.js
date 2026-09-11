@@ -137,6 +137,7 @@
   var slider = document.getElementById("tstSlider");
   if (slider) {
     var slides = slider.querySelectorAll(".tst-slide");
+    var track = slider.querySelector(".tst-slides");
     var dotsWrap = document.getElementById("tstDots");
     var prevBtn = document.getElementById("tstPrev");
     var nextBtn = document.getElementById("tstNext");
@@ -156,6 +157,7 @@
 
     function goTo(i) {
       index = (i + slides.length) % slides.length;
+      track.style.transform = "translateX(-" + (index * 100) + "%)";
       slides.forEach(function (s, k) { s.classList.toggle("active", k === index); });
       dots.forEach(function (d, k) { d.classList.toggle("active", k === index); });
     }
